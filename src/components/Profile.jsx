@@ -9,15 +9,30 @@ function Profile({ localUsers }) {
   const users = useApi ? apiUsers : localUsers;
 
 const toggleBlock = (
-      <div className="text-[10px] sm:text-[12px]  mt-44  mb-12" >{useApi ? "to see data from local..   " : "Click this button to fetch and display more users from the API instead of the limited local data..  "} <button
+      <div className="text-[10px] sm:text-[12px]  mt-44  mb-12 " >{useApi ? "to see data from local..   " : "Click this button to fetch and display more users from the API instead of the limited local data..  "} 
+      <button
         onClick={() => setUseApi(!useApi)}
-        className="mt-10 px-2 h-[20px] text-[8px] leading-[10px] 
+        className=" px-2 h-[20px] text-[8px] leading-[10px] 
                    bg-slate-900 text-white hover:bg-slate-700 
                    rounded-xl transform transition duration-300 
                    ease-out hover:scale-105"
       >
         {useApi ? "Show data from local" : "Test fetch cards data from API"}
       </button>
+
+
+      <span className="text-[10px] ">  View Source Code on GitHub... <a
+  href="https://github.com/HimAnshNA/ProfileCards"
+  target="_blank"
+ 
+  className="inline-block  px-2 py-[2px] h-[20px] text-[12px]    
+                   bg-slate-900 text-white hover:bg-slate-700 
+                   rounded-xl transform transition duration-300 
+                   ease-out hover:scale-105"
+>
+  open github
+</a>
+</span>
 </div>)
 
 
@@ -38,18 +53,7 @@ const toggleBlock = (
         ))}
       </div>
 {!useApi && toggleBlock}
-<p className="text-[12px]">  View Source Code on GitHub... <a
-  href="https://github.com/HimAnshNA/ProfileCards"
-  target="_blank"
- 
-  className="inline-block  px-2 py-[2px] h-[20px] text-[12px]    
-                   bg-slate-900 text-white hover:bg-slate-700 
-                   rounded-xl transform transition duration-300 
-                   ease-out hover:scale-105"
->
-  open github
-</a>
-</p>
+
 
 
     </div>
