@@ -9,7 +9,7 @@ function Profile({ localUsers }) {
   const users = useApi ? apiUsers : localUsers;
 
 const toggleBlock = (
-      <div className="text-[12px] mt-44" >{useApi ? "to see data from local..   " : "Click this button to fetch and display more users from the API instead of the limited local data..  "} <button
+      <div className="text-[10px] sm:text-[12px]  mt-44  mb-12" >{useApi ? "to see data from local..   " : "Click this button to fetch and display more users from the API instead of the limited local data..  "} <button
         onClick={() => setUseApi(!useApi)}
         className="mt-10 px-2 h-[20px] text-[8px] leading-[10px] 
                    bg-slate-900 text-white hover:bg-slate-700 
